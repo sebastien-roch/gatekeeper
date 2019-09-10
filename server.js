@@ -9,10 +9,8 @@ var url  = require('url'),
 // Load config defaults from JSON file.
 // Environment variables override defaults.
 var config = JSON.parse(fs.readFileSync(__dirname+ '/config.json.example', 'utf-8'));
-console.log("ENV WHEN STARTING:");
-console.log(JSON.stringify(process.env));
 for (var i in config) {
-  config[i] = process.env[i] || config[i];
+  config[i] = process.env[i.toUpperCase()] || config[i];
 }
 
 function authenticate(code, cb) {
