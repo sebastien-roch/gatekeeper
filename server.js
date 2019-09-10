@@ -9,6 +9,7 @@ var url  = require('url'),
 // Load config defaults from JSON file.
 // Environment variables override defaults.
 var config = JSON.parse(fs.readFileSync(__dirname+ '/config.json.example', 'utf-8'));
+
 for (var i in config) {
   config[i] = process.env[i] || config[i];
 }
@@ -27,6 +28,9 @@ function authenticate(code, cb) {
     method: "POST",
     headers: { 'content-length': data.length }
   };
+  console.log("ENV:");
+  console.log(JSON.stringify(process.env));
+  console.log("DATA:");
   console.log(JSON.stringify(data));
   console.log(JSON.stringify(reqOptions));
 
