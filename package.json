@@ -1,12 +1,18 @@
 {
-  "name"          : "poole",
-  "description"   : "Serving Jekyll faithfully.",
-  "url"           : "http://github.com/developmentseed/poole",
-  "keywords"      : ["jekyll", "editor", "markdown"],
-  "author"        : "Michael Aufreiter",
-  "contributors"  : [],
-  "dependencies"  : {"express": "2.5.10"},
-  "lib"           : ".",
-  "main"          : "index",
-  "version"       : "0.1.0"
+  "name": "poole",
+  "description": "Serving Jekyll faithfully.",
+  "url": "http://github.com/developmentseed/poole",
+  "keywords": [
+    "jekyll",
+    "editor",
+    "markdown"
+  ],
+  "author": "Michael Aufreiter",
+  "contributors": [],
+  "dependencies": {
+    "express": "2.5.10"
+  },
+  "lib": ".",
+  "main": "index",
+  "version": "0.1.0"
 }

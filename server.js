@@ -21,10 +21,10 @@ function authenticate(code, cb) {
   });
 
   var reqOptions = {
-    host: config.host,
-    port: config.port,
-    path: config.path,
-    method: config.method,
+    host: "github.com",
+    port: 443,
+    path: "/login/oauth/access_token",
+    method: "POST",
     headers: { 'content-length': data.length }
   };
 
@@ -59,6 +59,7 @@ app.get('/authenticate/:code', function(req, res) {
   });
 });
 
-app.listen(process.env.PORT, null, function (err) {
-  console.log('Gatekeeper, at your service: http://localhost:' + process.env.PORT);
+const port = process.env.PORT || 9000;
+app.listen(port, null, function (err) {
+  console.log('Gatekeeper, at your service: http://localhost:' + port);
 });
