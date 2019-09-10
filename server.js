@@ -27,10 +27,6 @@ function authenticate(code, cb) {
     method: "POST",
     headers: { 'content-length': data.length }
   };
-  
-  console.log("DATA:");
-  console.log(JSON.stringify(data));
-  console.log(JSON.stringify(reqOptions));
 
   var body = "";
   var req = https.request(reqOptions, function(res) {
